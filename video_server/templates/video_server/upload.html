@@ -1,0 +1,10 @@
+<form action="{% url 'upload_create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    제목 <br>
+    <input type="text" name="title"> <br>
+    날짜 <br>
+    <input type="date" name="date"> <br>
+    내용 <br>
+    <input type="file" name="video"><br>
+    <input type="submit" value="Submit" />
+</form>

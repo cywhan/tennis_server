@@ -1,0 +1,11 @@
+{% for file in vid_info %}
+    <h1>Track Sucess! See the csv file below</h1>
+    <h2> {{file.title}} </h2>
+    <h2> {{file.play_date}} </h2>
+    <video controls width="360">
+        <source src="{{ file.origin_video.url }}" type="video/mp4">
+        can't load video
+    </video>
+    <h2> {{file.processed_video_path}} </h2>
+    <br><br>
+{% endfor %}
